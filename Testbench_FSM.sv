@@ -22,7 +22,7 @@ module detector_fsm_tb();
     
     // Step 1: Enter isolation state (0110)
     $display("Entering Isolation State");
-    #10 in = 0; #10 in = 1; #10 in = 1; #10 in = 0;
+    #10 in = 0; #10 in = 1; #10 in = 1; #10 in = 0; #10 in = 0; #10 in = 0;
     
     // Step 2: Apply reset
     $display("Applying Reset");
@@ -38,10 +38,14 @@ module detector_fsm_tb();
     
     // Step 4: Enter deadlock state (0111)
     $display("Entering Deadlock State");
-    #10 in = 0; #10 in = 1; #10 in = 1; #10 in = 1;
+    #10 in = 1; #10 in = 1; #10 in = 1; #10 in = 1; #10 in = 1;
+    $display("Applying Reset");
+    #10 rst = 1; #10 rst = 0; #10 in = 1; #10 in = 1; #10 in = 1;
+
     
     #50;
     $stop;
   end
   
 endmodule
+
