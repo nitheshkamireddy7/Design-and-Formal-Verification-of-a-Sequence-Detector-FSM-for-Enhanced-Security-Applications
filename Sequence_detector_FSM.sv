@@ -40,7 +40,7 @@ module detector_fsm(
       D2: next = (in) ? D : I;
       D: next = D;
       I: next = I;
-      default: next = S0;
+      default: next = 'x; // Ensure undefined transitions go to 'x'
     endcase
   end
 
