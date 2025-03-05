@@ -1,0 +1,22 @@
+ Compile of fsm_detector.sv was successful.
+# Compile of fsm_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui -voptargs=+acc work.detector_fsm_tb
+# vsim -gui -voptargs="+acc" work.detector_fsm_tb 
+# Start time: 14:38:28 on Mar 05,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.detector_fsm_tb(fast)
+# Loading work.detector_fsm(fast)
+add wave -position insertpoint sim:/detector_fsm_tb/*
+add wave -position insertpoint sim:/detector_fsm_tb/uut/*
+run -all
+# Entering Isolation State
+# Applying Reset
+# Providing Detection Sequence
+# Sequence Matched!
+# Entering Deadlock State
+# Applying Reset
+# ** Note: $stop    : //thoth.cecs.pdx.edu/Home05/nitheshk/Desktop/formal project 4/fsm_tb.sv(47)
+#    Time: 350 ns  Iteration: 0  Instance: /detector_fsm_tb
+# Break in Module detector_fsm_tb at //thoth.cecs.pdx.edu/Home05/nitheshk/Desktop/formal project 4/fsm_tb.sv line 47
